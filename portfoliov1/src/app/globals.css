@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Tema tokens (v4 – ingen tailwind.config nødvendig) */
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-accent: #00d1b2;
+  --shadow-soft: 0 10px 30px -10px rgb(0 0 0 / 0.4);
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans";
+}
+
+/* spacing + anker-offset til sticky header */
+.section {
+  @apply relative overflow-hidden py-24 md:py-32;
+}
+.anchor {
+  scroll-margin-top: 96px;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
